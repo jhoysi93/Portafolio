@@ -21,8 +21,12 @@ export class ProductosService {
       this.http.get('https://paginaweb-22df1.firebaseio.com/productos_idx.json')
                 .subscribe( res =>{
                   console.log( res.json() );
-                  this.cargandoProductos = false;
-                  this.productos = res.json();
+
+                 // setTimeout( ()=>{
+                    this.cargandoProductos = false;
+                    this.productos = res.json();
+
+                  //}, 1500)
                 });
     }
   }
