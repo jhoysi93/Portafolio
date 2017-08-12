@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+
 //components
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -13,6 +14,9 @@ import { ItemComponent } from './components/item/item.component';
 
 //routes
 import { APP_ROUTING } from "./app.routes";
+
+//services
+import { InformacionService } from './services/informacion.service';
 
 
 @NgModule({
@@ -30,7 +34,7 @@ import { APP_ROUTING } from "./app.routes";
     HttpModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [InformacionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
