@@ -30,4 +30,8 @@ export class ProductosService {
                 });
     }
   }
+
+  public cargarProducto( cod: string ){
+    return this.http.get(`https://paginaweb-22df1.firebaseio.com/productos/${ cod }.json`)
+  }
 }
