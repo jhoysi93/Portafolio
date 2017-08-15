@@ -7,7 +7,7 @@ import { ProductosService } from '../../services/productos.service';
 })
 export class PortafolioComponent {
 
-  constructor( private _proSer: ProductosService ) { 
+  constructor( public _proSer: ProductosService ) { 
     
   }
 

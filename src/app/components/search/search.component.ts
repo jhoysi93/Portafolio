@@ -11,7 +11,7 @@ export class SearchComponent  {
 
   termino: string = undefined;
 
-  constructor( public route:ActivatedRoute, public _proSer: ProductosService) { 
+  constructor( private route:ActivatedRoute, public _proSer: ProductosService) { 
         route.params.subscribe( parametros =>{
           this.termino = parametros['termino'];
          // console.log( this.termino );
