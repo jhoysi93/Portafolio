@@ -1,10 +1,10 @@
 import { RouterModule, Routes } from '@angular/router';
-import { PortafolioComponent, ItemComponent } from "./components/index.pagina";
-import { AboutComponent } from './components/about/about.component';
-import { SearchComponent } from './components/search/search.component';
+import { ModuleWithProviders } from '@angular/core';
+import { PortafolioComponent, ItemComponent, AboutComponent, SearchComponent } from "./components/index.pagina";
 
 
  const APP_ROUTES: Routes =[
+     { path: '', component: PortafolioComponent },
      { path: 'home', component: PortafolioComponent },
      { path: 'about', component: AboutComponent },
      { path: 'item/:id', component: ItemComponent },
@@ -13,4 +13,4 @@ import { SearchComponent } from './components/search/search.component';
  ];
 
 
-export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES);
+export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES, { useHash: true });
